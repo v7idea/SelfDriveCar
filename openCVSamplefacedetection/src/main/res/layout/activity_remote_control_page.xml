@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.opencv.samples.facedetect.RemoteControlPage">
+
+    <com.v7idea.template.View.SpecialImageView
+        android:id="@+id/RemoteControlPage_SpecialImageView_backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@mipmap/control_page"/>
+
+    <com.v7idea.template.View.SpecialImageView
+        android:id="@+id/RemoteControlPage_SpecialImageView_ToNextPage"
+        android:layout_width="85px"
+        android:layout_height="85px"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50px"
+        android:layout_marginLeft="41px"/>
+
+    <com.v7idea.template.View.RemoteControlPanel
+        android:id="@+id/RemoteControlPage_RemoteControlPanel_leftHandPanel"
+        android:layout_width="180px"
+        android:layout_height="390px"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="115px"
+        android:layout_marginBottom="45px"
+        android:tag="leftHandPanel"
+        android:splitMotionEvents="true"/>
+
+    <com.v7idea.template.View.RemoteControlPanel
+        android:id="@+id/RemoteControlPage_RemoteControlPanel_rightHandPanel"
+        android:layout_width="410px"
+        android:layout_height="380px"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="95px"
+        android:layout_marginBottom="45px"
+        android:tag="rightHandPanel"
+        android:splitMotionEvents="true"/>
+
+    <TextView
+        android:id="@+id/RemoteControlPage_TextView_ShowConnectStatus"
+        android:layout_width="820px"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="60px"
+        android:layout_marginLeft="345px"
+        android:paddingLeft="20px"
+        android:textSize="30px"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/RemoteControlPage_TextView_ShowValue"
+        android:layout_width="820px"
+        android:layout_height="150px"
+        android:layout_alignLeft="@+id/RemoteControlPage_TextView_ShowConnectStatus"
+        android:layout_below="@+id/RemoteControlPage_TextView_ShowConnectStatus"
+        android:textSize="30px"
+        android:paddingLeft="20px"
+        android:textColor="@android:color/white"/>
+
+</RelativeLayout>

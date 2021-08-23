@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.v7idea.template.View.SpecialImageView
+        android:id="@+id/bannerShort_SpecialImageView_bannerBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@+id/bannerShort_LinearLayout_textContainer"
+        android:layout_alignLeft="@+id/bannerShort_TextView_touchArea"
+        android:layout_alignRight="@+id/bannerShort_LinearLayout_textContainer"
+        android:layout_alignBottom="@+id/bannerShort_LinearLayout_textContainer"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:background="@android:color/white"/>
+
+    <LinearLayout
+        android:id="@+id/bannerShort_LinearLayout_textContainer"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:gravity="center">
+
+        <com.v7idea.template.View.V7TitleView
+            android:id="@+id/bannerShort_TextView_headerText"
+            android:layout_width="260px"
+            android:layout_height="80px"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="32px"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bannerShort_LinearLayout_InternetStatusBar"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bannerShort_LinearLayout_textContainer"
+        android:layout_centerHorizontal="true">
+
+        <com.v7idea.template.View.BannerUserBar
+            android:id="@+id/bannerShort_BannerUserBar_ShowInternetStatus"
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/bannerShort_LinearLayout_HaveNewData"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/bannerShort_LinearLayout_InternetStatusBar"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:visibility="gone">-->
+
+        <!--<com.v7idea.template.View.V7TitleView-->
+            <!--android:id="@+id/bannerShort_V7TitleView_HaveNewData"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="60px"-->
+            <!--android:textColor="@android:color/white"-->
+            <!--android:gravity="center"-->
+            <!--android:paddingLeft="10px"-->
+            <!--android:textSize="40px"-->
+            <!--android:text="@string/have_new_data_do_you_want_update"-->
+            <!--android:background="@color/color_F3282828" />-->
+
+    <!--</LinearLayout>-->
+
+    <com.v7idea.template.View.SpecialImageView
+        android:id="@+id/bannerShort_SpecialImageView_backIcon"
+        android:layout_width="24px"
+        android:layout_height="39px"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="30px"
+        android:layout_marginTop="25px"
+        android:scaleType="fitXY"
+        android:src="@mipmap/arrow_pre"/>
+
+    <TextView
+        android:id="@+id/bannerShort_TextView_touchArea"
+        android:layout_width="151px"
+        android:layout_height="88px"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:textSize="45px" />
+
+    <com.v7idea.template.View.V7TitleView
+        android:id="@+id/bannerShort_V7TitleView_ShowText"
+        android:layout_width="wrap_content"
+        android:layout_height="88px"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="30px"
+        android:textColor="@android:color/white"
+        android:gravity="center_vertical"
+        android:textSize="30px" />
+
+    <RelativeLayout
+        android:id="@+id/bannerShort_RelativeLayout_IconContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="88px"
+        android:layout_marginRight="30px"
+        android:layout_alignBottom="@+id/bannerShort_LinearLayout_InternetStatusBar"
+        android:layout_alignParentStart="true">
+
+        <com.v7idea.template.View.SpecialImageView
+            android:id="@+id/bannerShort_SpecialImageView_Icon"
+            android:layout_width="30px"
+            android:layout_height="38px"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:scaleType="fitXY" />
+
+        <com.v7idea.template.View.SpecialImageView
+            android:id="@+id/bannerShort_SpecialImageView_QrIcon"
+            android:layout_width="36px"
+            android:layout_height="36px"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/bannerShort_SpecialImageView_Icon"
+            android:layout_marginRight="20px"
+            android:scaleType="fitXY" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

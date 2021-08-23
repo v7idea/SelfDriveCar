@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context="org.opencv.samples.facedetect.ChooseModeActivity">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_centerVertical="true"
+        android:padding="10dp"
+        android:weightSum="4">
+
+        <Button
+            android:id="@+id/ChooseMode_Button_RecordFrame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="50px"
+            android:text="@string/RecordFrame_Mode"
+            android:onClick="onPressButton"/>
+
+        <Button
+            android:id="@+id/ChooseMode_Button_Command"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="50px"
+            android:text="@string/command_Mode"
+            android:onClick="onPressButton"/>
+
+        <Button
+            android:id="@+id/ChooseMode_Button_Car"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="50px"
+            android:text="@string/car_Mode"
+            android:onClick="onPressButton"/>
+
+        <Button
+            android:id="@+id/ChooseMode_Button_WebCam"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="50px"
+            android:text="@string/webCame_Mode"
+            android:onClick="onPressButton"/>
+
+        <Button
+            android:id="@+id/ChooseMode_Button_Remote"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="50px"
+            android:text="@string/remote_Mode"
+            android:onClick="onPressButton"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

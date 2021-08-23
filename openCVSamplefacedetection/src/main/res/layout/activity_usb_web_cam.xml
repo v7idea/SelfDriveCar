@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.opencv.samples.facedetect.UsbWebCamActivity">
+
+    <ImageView
+        android:id="@+id/UsbWebCam_ImageView_FrameImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/UsbWebCam_LinearLayout_Panel"
+        android:layout_width="622px"
+        android:layout_height="96px"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30px"
+        android:background="@mipmap/top_pannel">
+
+        <LinearLayout
+            android:id="@+id/UsbWebCam_LinearLayout_ChannelArea"
+            android:orientation="vertical"
+            android:layout_width="235px"
+            android:layout_height="match_parent">
+
+            <com.v7idea.template.View.V7TitleView
+                android:id="@+id/UsbWebCam_V7TitleView_ShowChannel1Value"
+                android:layout_width="match_parent"
+                android:layout_height="48px"
+                android:layout_marginLeft="90px"
+                android:gravity="center"
+                android:textColor="@color/color_Yellow_FFFF33"
+                android:textSize="30px"/>
+
+            <com.v7idea.template.View.V7TitleView
+                android:id="@+id/UsbWebCam_V7TitleView_ShowChannel2Value"
+                android:layout_width="match_parent"
+                android:layout_height="48px"
+                android:layout_marginLeft="90px"
+                android:gravity="center"
+                android:textColor="@color/color_Yellow_FFFF33"
+                android:textSize="30px"/>
+
+        </LinearLayout>
+
+        <com.v7idea.template.View.V7TitleView
+            android:id="@+id/UsbWebCam_V7TitleView_ShowFPS"
+            android:layout_width="160px"
+            android:layout_height="match_parent"
+            android:textColor="@color/color_Yellow_FFFF33"
+            android:textSize="60px"
+            android:gravity="center"
+            android:text="45.0"/>
+
+        <LinearLayout
+            android:id="@+id/UsbWebCam_LinearLayout_bleStatusArea"
+            android:orientation="horizontal"
+            android:layout_width="227px"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <com.v7idea.template.View.AutoReleaseImageView
+                android:id="@+id/UsbWebCam_AutoReleaseImageView_BtStatusIcon"
+                android:layout_width="54px"
+                android:layout_height="48px"
+                android:scaleType="fitXY"
+                android:src="@mipmap/icon_bt_status_on"/>
+
+            <com.v7idea.template.View.AutoReleaseImageView
+                android:id="@+id/UsbWebCam_AutoReleaseImageView_BtAliceIcon"
+                android:layout_width="54px"
+                android:layout_height="48px"
+                android:layout_marginLeft="20px"
+                android:scaleType="fitXY"
+                android:src="@mipmap/icon_bt_alive"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignBottom="@+id/UsbWebCam_LinearLayout_Panel"
+        android:layout_toLeftOf="@+id/UsbWebCam_LinearLayout_Panel"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/UsbWebCam_AutoReleaseImageView_SettingIcon"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:scaleType="fitXY"
+            android:src="@drawable/setting_selector" />
+
+        <com.v7idea.template.View.AutoReleaseImageView
+            android:id="@+id/UsbWebCam_AutoReleaseImageView_EngineeringMode"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:layout_marginLeft="20px"
+            android:scaleType="fitXY"
+            android:src="@drawable/engineering_selector"/>
+
+    </LinearLayout>
+
+    <com.v7idea.template.View.V7TitleView
+        android:id="@+id/UsbWebCam_V7TitleView_ShowCurrentMode"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/UsbWebCam_LinearLayout_Panel"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/UsbWebCam_LinearLayout_Panel"
+        android:layout_alignBottom="@+id/UsbWebCam_LinearLayout_Panel"
+        android:layout_marginLeft="41px"
+        android:layout_marginRight="41px"
+        android:textSize="40px"
+        android:background="@drawable/gray_fram_alpha_black"
+        android:textColor="@color/color_Yellow_FFFF33"
+        android:text="車用模式"
+        android:gravity="center"/>
+
+    <com.v7idea.template.View.AutoReleaseImageView
+        android:id="@+id/UsbWebCam_AutoReleaseImageView_Indicator"
+        android:layout_width="1196px"
+        android:layout_height="240px"
+        android:layout_below="@+id/UsbWebCam_LinearLayout_Panel"
+        android:layout_marginTop="10px"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        android:src="@mipmap/reference_line" />
+
+    <Button
+        android:id="@+id/UsbWebCam_button_leftReferenceLine"
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20px"
+        android:textColor="@android:color/white"
+        android:textSize="40px"
+        android:text="L"
+        android:background="@drawable/reference_line_selector"/>
+
+    <Button
+        android:id="@+id/UsbWebCam_button_rightReferenceLine"
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20px"
+        android:textColor="@android:color/white"
+        android:textSize="40px"
+        android:text="R"
+        android:background="@drawable/reference_line_selector"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/UsbWebCam_LinearLayout_ButtonGroup"
+        android:layout_width="208px"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/UsbWebCam_AutoReleaseImageView_Indicator"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/UsbWebCam_ImageView_Record"
+            android:layout_width="122px"
+            android:layout_height="122px"
+            android:scaleType="fitXY"
+            android:src="@drawable/record_selector"/>
+
+        <ImageView
+            android:id="@+id/UsbWebCam_ImageView_startSendCommand"
+            android:layout_width="172px"
+            android:layout_height="172px"
+            android:layout_marginTop="10px"
+            android:scaleType="fitXY"
+            android:src="@drawable/send_command_selector"/>
+
+    </LinearLayout>
+
+    <org.opencv.samples.facedetect.View.DetectionValueGroup
+        android:orientation="vertical"
+        android:id="@+id/UsbWebCam_DetectionValueGroup_showLeftValueGroup"
+        android:layout_width="450px"
+        android:layout_height="252px"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/fdActivity_LinearLayout_ButtonGroup"/>
+
+    <org.opencv.samples.facedetect.View.DetectionValueGroup
+        android:orientation="vertical"
+        android:id="@+id/UsbWebCam_DetectionValueGroup_showRightValueGroup"
+        android:layout_width="450px"
+        android:layout_height="252px"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/UsbWebCam_LinearLayout_ButtonGroup"/>
+
+    <TextView
+        android:id="@+id/UsbWebCam_TextView_IsConnected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="30px"
+        android:textSize="25px"
+        android:textColor="@android:color/holo_green_light"/>
+
+    <TextView
+        android:id="@+id/UsbWebCam_TextView_showIpAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:text="IpAddress"
+        android:padding="10dp"
+        android:alpha="0.8"
+        android:onClick="onPressChangeCommandPeriod"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/UsbWebCam_TextView_ChangeBluetoothCommandPeriod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Period"
+        android:padding="10dp"
+        android:alpha="0.8"
+        android:onClick="onPressChangeCommandPeriod"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/UsbWebCam_TextView_showIpAddress"
+        android:layout_alignLeft="@+id/UsbWebCam_TextView_showIpAddress"
+        android:visibility="gone"/>
+
+</RelativeLayout>

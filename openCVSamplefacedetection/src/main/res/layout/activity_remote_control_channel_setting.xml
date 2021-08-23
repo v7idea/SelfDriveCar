@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:background="@mipmap/wifibackground"
+    tools:context="org.opencv.samples.facedetect.RemoteControlChannelSetting">
+
+    <com.v7idea.template.View.Banner
+        android:id="@+id/RemoteControlChannelSetting_Banner_Header"
+        android:layout_width="match_parent"
+        android:layout_height="91px"
+        android:layout_alignParentTop="true"
+        android:background="@mipmap/top_bar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:layout_below="@+id/RemoteControlChannelSetting_Banner_Header"
+        android:layout_above="@+id/RemoteControlChannelSetting_BottomMenuLayout_BottomMenu">
+
+        <com.v7idea.template.View.SpecialImageView
+            android:id="@+id/RemoteControlChannelSetting_SpecialImageView_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@+id/RemoteControlChannelSetting_V7TitleView_lowerValue"
+            android:layout_alignBottom="@+id/RemoteControlChannelSetting_V7TitleView_failSafeValue"
+            android:layout_alignLeft="@+id/RemoteControlChannelSetting_SpecialImageView_SubTrimBackground"
+            android:layout_alignRight="@+id/RemoteControlChannelSetting_SpecialImageView_SubTrimBackground"
+            android:scaleType="fitXY"
+            android:layout_marginTop="-20px"
+            android:layout_marginBottom="-20px"
+            android:src="@mipmap/menu4_bg"/>
+
+        <com.v7idea.template.View.SpecialImageView
+            android:id="@+id/RemoteControlChannelSetting_SpecialImageView_SubTrimBackground"
+            android:layout_width="834px"
+            android:layout_height="297px"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10px"
+            android:scaleType="fitXY"
+            android:src="@mipmap/menu4_adj_bar"/>
+
+        <com.v7idea.template.View.V7TitleView
+            android:id="@+id/RemoteControlChannelSetting_V7TitleView_lowerValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30px"
+            android:layout_alignLeft="@+id/RemoteControlChannelSetting_SpecialImageView_lowerLimitBar"
+            android:layout_above="@+id/RemoteControlChannelSetting_SpecialImageView_lowerLimitBar"
+            android:text="1000(-100)"/>
+
+        <com.v7idea.template.View.SpecialImageView
+            android:id="@+id/RemoteControlChannelSetting_SpecialImageView_lowerLimitBar"
+            android:layout_width="70px"
+            android:layout_height="103px"
+            android:layout_alignLeft="@+id/RemoteControlChannelSetting_SpecialImageView_SubTrimBackground"
+            android:layout_alignTop="@+id/RemoteControlChannelSetting_SpecialImageView_SubTrimBackground"
+            android:layout_marginTop="47px"
+            android:layout_marginLeft="97px"
+            android:scaleType="fitXY"
+            android:src="@mipmap/menu4_left_right_button"/>
+
+        <com.v7idea.template.View.V7TitleView
+            android:id="@+id/RemoteControlChannelSetting_V7TitleView_upperValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30px"
+            android:layout_alignLeft="@+id/RemoteControlChannelSetting_SpecialImageView_upperLimitBar"
+            android:layout_above="@+id/RemoteControlChannelSetting_SpecialImageView_upperLimitBar"
+            android:text="2000(100)"/>
+
+        <com.v7idea.template.View.SpecialImageView
+            android:id="@+id/RemoteControlChannelSetting_SpecialImageView_upperLimitBar"
+            android:layout_width="70px"
+            android:layout_height="103px"
+            android:layout_alignLeft="@+id/RemoteControlChannelSetting_SpecialImageView_SubTrimBackground"
+            android:layout_alignTop="@+id/RemoteControlChannelSetting_SpecialImageView_SubTrimBackground"
+            android:layout_marginTop="47px"
+            android:layout_marginLeft="662px"
+            android:scaleType="fitXY"
+            android:src="@mipmap/menu4_left_right_button"/>
+
+        <com.v7idea.template.View.V7TitleView
+            android:id="@+id/RemoteControlChannelSetting_V7TitleView_middleValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30px"
+            android:layout_alignLeft="@+id/RemoteControlChannelSetting_SpecialImageView_middleLimitBar"
+            android:layout_above="@+id/RemoteControlChannelSetting_SpecialImageView_middleLimitBar"
+            android:text="1500(0)"/>
+
+        <com.v7idea.template.View.SpecialImageView
+            android:id="@+id/RemoteControlChannelSetting_SpecialImageView_middleLimitBar"
+            android:layout_width="66px"
+            android:layout_height="148px"
+            android:layout_alignLeft="@+id/RemoteControlChannelSetting_SpecialImageView_SubTrimBackground"
+            android:layout_alignTop="@+id/RemoteControlChannelSetting_SpecialImageView_SubTrimBackground"
+            android:layout_marginTop="25px"
+            android:layout_marginLeft="384px"
+            android:scaleType="fitXY"
+            android:src="@mipmap/menu4_middle_button"/>
+
+        <com.v7idea.template.View.SpecialImageView
+            android:id="@+id/RemoteControlChannelSetting_SpecialImageView_failSafeBar"
+            android:layout_width="44px"
+            android:layout_height="74px"
+            android:layout_alignLeft="@+id/RemoteControlChannelSetting_SpecialImageView_SubTrimBackground"
+            android:layout_alignBottom="@+id/RemoteControlChannelSetting_SpecialImageView_SubTrimBackground"
+            android:layout_marginBottom="25px"
+            android:layout_marginLeft="395px"
+            android:scaleType="fitXY"
+            android:src="@mipmap/menu4_middle_button"/>
+
+        <com.v7idea.template.View.V7TitleView
+            android:id="@+id/RemoteControlChannelSetting_V7TitleView_failSafeValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30px"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/RemoteControlChannelSetting_SpecialImageView_failSafeBar"
+            android:text="1500(0)"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_alignTop="@+id/RemoteControlChannelSetting_SpecialImageView_background"
+            android:layout_toRightOf="@+id/RemoteControlChannelSetting_SpecialImageView_background"
+            android:layout_alignBottom="@+id/RemoteControlChannelSetting_SpecialImageView_background"
+            android:clipToPadding="false">
+
+            <com.v7idea.template.View.SpecialImageView
+                android:id="@+id/RemoteControlChannelSetting_SpecialImageView_Expotentail"
+                android:layout_width="180px"
+                android:layout_height="141px"
+                android:scaleType="fitXY"
+                android:src="@mipmap/static_type_1"/>
+
+            <com.v7idea.template.View.SpecialImageView
+                android:id="@+id/RemoteControlChannelSetting_SpecialImageView_ReverseSwitch"
+                android:layout_width="188px"
+                android:layout_height="54px"
+                android:layout_marginTop="71px"
+                android:scaleType="fitXY"
+                android:src="@drawable/switch_selector"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.v7idea.template.View.BottomMenuLayout
+        android:id="@+id/RemoteControlChannelSetting_BottomMenuLayout_BottomMenu"
+        android:layout_width="match_parent"
+        android:layout_height="99px"
+        android:layout_alignParentBottom="true"
+        android:background="@mipmap/bottom_menu_bar"
+        android:visibility="gone"/>
+
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content" android:layout_height="wrap_content">
+
+    <com.v7idea.template.View.SpecialImageView
+        android:id="@+id/MenuItem_SpecialImageView_Background"
+        android:layout_width="178px"
+        android:layout_height="228px"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/menu_item_trim_adj_selector"/>
+
+    <com.v7idea.template.View.V7TitleView
+        android:id="@+id/MenuItem_V7TitleView_MenuName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@+id/MenuItem_SpecialImageView_Background"
+        android:textSize="25px"
+        android:text="SUB TRIM／END ADJ"/>
+
+</RelativeLayout>

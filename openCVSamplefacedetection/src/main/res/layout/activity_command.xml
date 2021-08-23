@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.opencv.samples.facedetect.CommandActivity">
+
+    <ImageView
+        android:id="@+id/CommandActivity_ImageView_ShowCarSendImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ImageView
+        android:id="@+id/CommandActivity_ImageView_ToChangeDetectionParams"
+        android:layout_width="94px"
+        android:layout_height="94px"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="129px"
+        android:scaleType="fitStart"
+        android:background="@drawable/button_selector"
+        android:src="@mipmap/progresspicturetool"/>
+
+    <LinearLayout
+        android:id="@+id/CommandActivity_LinearLayout_statusGroup"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|center_horizontal"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/CommandActivity_ImageView_ToChangeDetectionParams"
+        android:layout_toLeftOf="@+id/CommandActivity_TextView_ShowCommandValue"
+        android:layout_marginRight="10px"
+        android:layout_marginTop="10px">
+
+        <TextView
+            android:id="@+id/CommandActivity_TextView_ConnectedApp"
+            android:layout_width="match_parent"
+            android:layout_height="60px"
+            android:layout_marginBottom="10px"
+            android:gravity="center"
+            android:background="@drawable/connected_selector"
+            android:textSize="28px"
+            android:text="@string/disconnected_app"/>
+
+        <TextView
+            android:id="@+id/CommandActivity_TextView_ConnectedDevice"
+            android:layout_width="match_parent"
+            android:layout_height="60px"
+            android:gravity="center"
+            android:background="@drawable/connected_selector"
+            android:textSize="28px"
+            android:text="@string/disconnected_device"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/CommandActivity_TextView_ShowCommandValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/CommandActivity_ImageView_ToChangeDetectionParams"
+        android:layout_toLeftOf="@+id/CommandActivity_ImageView_IsActive"
+        android:layout_alignParentBottom="true"
+        android:textSize="30px"
+        android:layout_marginRight="10px"/>
+
+    <ImageView
+        android:id="@+id/CommandActivity_ImageView_IsActive"
+        android:layout_width="213px"
+        android:layout_height="213px"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/send_command_selector"
+        android:layout_centerVertical="true"/>
+
+    <ImageView
+        android:id="@+id/CommandActivity_ImageView_IsRecord"
+        android:layout_width="213px"
+        android:layout_height="213px"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/record_selector"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/CommandActivity_ImageView_IsActive"/>
+
+    <TextView
+        android:id="@+id/CommandActivity_TextView_isSetLeftReferenceLine"
+        android:layout_width="213px"
+        android:layout_height="213px"
+        android:layout_alignParentRight="true"
+        android:layout_above="@+id/CommandActivity_TextView_isSetRightReferenceLine"
+        android:background="@drawable/send_command_selector"
+        android:text="L"
+        android:textSize="70px"
+        android:gravity="center"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/CommandActivity_TextView_isSetRightReferenceLine"
+        android:layout_width="213px"
+        android:layout_height="213px"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/send_command_selector"
+        android:text="R"
+        android:textSize="70px"
+        android:gravity="center"
+        android:visibility="gone"/>
+
+</RelativeLayout>

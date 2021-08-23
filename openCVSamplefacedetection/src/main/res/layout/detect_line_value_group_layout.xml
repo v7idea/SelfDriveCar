@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="450px"
+    android:layout_height="252px"
+    android:gravity="center_horizontal">
+
+    <com.v7idea.template.View.AutoReleaseImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/white"/>
+
+    <TableLayout
+        android:id="@+id/DetectionGroup_TableLayout_ValueGroup"
+        android:layout_width="378px"
+        android:layout_height="144px"
+        android:gravity="bottom"
+        android:paddingTop="43px"
+        android:layout_marginTop="13px"
+        android:background="@mipmap/detect_line_status">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <com.v7idea.template.View.V7TitleView
+                android:id="@+id/DetectionGroup_V7TitleView_M1"
+                android:layout_width="92px"
+                android:layout_height="48px"
+                android:textSize="20px"
+                android:layout_margin="1px"
+                android:text="車用模式"
+                android:gravity="center"/>
+
+            <com.v7idea.template.View.V7TitleView
+                android:id="@+id/DetectionGroup_V7TitleView_C1"
+                android:layout_width="92px"
+                android:layout_height="48px"
+                android:textSize="20px"
+                android:layout_margin="1px"
+                android:text="車用模式"
+                android:gravity="center"/>
+
+            <com.v7idea.template.View.V7TitleView
+                android:id="@+id/DetectionGroup_V7TitleView_P11"
+                android:layout_width="92px"
+                android:layout_height="48px"
+                android:textSize="20px"
+                android:layout_margin="1px"
+                android:text="車用模式"
+                android:gravity="center"/>
+
+            <com.v7idea.template.View.V7TitleView
+                android:id="@+id/DetectionGroup_V7TitleView_P12"
+                android:layout_width="92px"
+                android:layout_height="48px"
+                android:layout_margin="1px"
+                android:text="123\n400"
+                android:textSize="20px"
+                android:gravity="center"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <com.v7idea.template.View.V7TitleView
+                android:id="@+id/DetectionGroup_V7TitleView_M2"
+                android:layout_width="92px"
+                android:layout_height="48px"
+                android:textSize="20px"
+                android:layout_margin="1px"
+                android:text="車用模式"
+                android:gravity="center"/>
+
+            <com.v7idea.template.View.V7TitleView
+                android:id="@+id/DetectionGroup_V7TitleView_C2"
+                android:layout_width="92px"
+                android:layout_height="48px"
+                android:textSize="20px"
+                android:layout_margin="1px"
+                android:text="車用模式"
+                android:gravity="center"/>
+
+            <com.v7idea.template.View.V7TitleView
+                android:id="@+id/DetectionGroup_V7TitleView_P21"
+                android:layout_width="92px"
+                android:layout_height="48px"
+                android:textSize="20px"
+                android:layout_margin="1px"
+                android:text="車用模式"
+                android:gravity="center"/>
+
+            <com.v7idea.template.View.V7TitleView
+                android:id="@+id/DetectionGroup_V7TitleView_P22"
+                android:layout_width="92px"
+                android:layout_height="48px"
+                android:textSize="20px"
+                android:layout_margin="1px"
+                android:text="車用模式"
+                android:gravity="center"/>
+
+        </TableRow>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/DetectionGroup_LinearLayout_accArea"
+        android:orientation="horizontal"
+        android:layout_width="450px"
+        android:layout_height="58px"
+        android:layout_marginTop="13px"
+        android:gravity="center_vertical"
+        android:background="@mipmap/acc_background">
+
+        <com.v7idea.template.View.V7TitleView
+            android:id="@+id/DetectionGroup_LinearLayout_accValue1"
+            android:layout_width="114px"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20px"
+            android:textSize="20px"
+            android:text=""
+            android:gravity="center"/>
+
+        <com.v7idea.template.View.V7TitleView
+            android:id="@+id/DetectionGroup_LinearLayout_accValue2"
+            android:layout_width="114px"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12px"
+            android:textSize="20px"
+            android:text=""
+            android:gravity="center"/>
+
+        <com.v7idea.template.View.V7TitleView
+            android:id="@+id/DetectionGroup_LinearLayout_accValue3"
+            android:layout_width="114px"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16px"
+            android:textSize="20px"
+            android:text=""
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/DetectionGroup_LinearLayout_gyoArea"
+        android:layout_width="450px"
+        android:layout_height="58px"
+        android:layout_marginTop="13px"
+        android:gravity="center_vertical"
+        android:background="@mipmap/gyro_background">
+
+        <com.v7idea.template.View.V7TitleView
+            android:id="@+id/DetectionGroup_V7TitleView_gyoValue1"
+            android:layout_width="114px"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="62px"
+            android:textSize="20px"
+            android:text=""
+            android:gravity="center"/>
+
+        <com.v7idea.template.View.V7TitleView
+            android:id="@+id/DetectionGroup_V7TitleView_gyoValue2"
+            android:layout_width="114px"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12px"
+            android:textSize="20px"
+            android:text=""
+            android:gravity="center"/>
+
+        <com.v7idea.template.View.V7TitleView
+            android:id="@+id/DetectionGroup_V7TitleView_gyoValue3"
+            android:layout_width="114px"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15px"
+            android:textSize="20px"
+            android:text=""
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</LinearLayout>

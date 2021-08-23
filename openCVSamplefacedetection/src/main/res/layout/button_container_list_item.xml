@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="5dp">
+
+    <com.v7idea.template.View.SpecialImageView
+        android:id="@+id/buttonItem_AppCompatImageView_background"
+        android:layout_width="153px"
+        android:layout_height="74px"
+        android:scaleType="fitXY"/>
+
+    <com.v7idea.template.View.V7TitleView
+        android:id="@+id/buttonItem_AppCompatTextView_showText"
+        android:layout_width="153px"
+        android:layout_height="74px"
+        android:gravity="center"
+        android:textSize="35px"/>
+
+</RelativeLayout>

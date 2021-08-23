@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="800px"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/bottommenulaout_bottomContent"
+        android:layout_width="match_parent"
+        android:layout_height="135px"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal"></LinearLayout>
+
+</RelativeLayout>

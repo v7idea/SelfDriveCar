@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="160px"
+    android:layout_height="99px">
+
+    <ImageView
+        android:id="@+id/bottommenuiconlayout_itemIcon"
+        android:layout_width="76px"
+        android:layout_height="74px"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/bottom_menu_icon_selector"/>
+
+    <TextView
+        android:id="@+id/bottommenuiconlayout_NoticeCount"
+        android:layout_width="40px"
+        android:layout_height="40px"
+        android:layout_alignTop="@+id/bottommenuiconlayout_itemIcon"
+        android:layout_alignRight="@+id/bottommenuiconlayout_itemIcon"
+        android:layout_marginRight="-20px"
+        android:layout_marginTop="-10px"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:text="aa"
+        android:textSize="26px"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/bottommenuiconlayout_itemText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/bottommenuiconlayout_itemIcon"
+        android:layout_marginLeft="0px"
+        android:layout_marginTop="-5px"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/white"
+        android:textSize="26px"
+        android:text="CH1"/>
+
+    <RelativeLayout
+        android:id="@+id/bottommenuiconlayout_iconTouch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

@@ -1,0 +1,1469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/OriginalRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/mainActivity_ImageView_Original"
+                    android:layout_width="960px"
+                    android:layout_height="540px"
+                    android:scaleType="centerCrop"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/mainActivity_TextView_Original"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/mainActivity_ImageView_Original"
+                    android:layout_centerHorizontal="true"
+                    android:text="TextView"
+                    android:textColor="@android:color/holo_orange_dark" />
+
+                <Button
+                    android:id="@+id/mainActivity_Button_toChannelPage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:padding="5px"
+                    android:gravity="center"
+                    android:textSize="30px"
+                    android:text="Channel參數調整" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ButtonLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="90px"
+                android:layout_below="@id/OriginalRelativeLayout"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/mainActivity_Button_PrePage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="30px"
+                    android:text="PrePage" />
+
+                <Button
+                    android:id="@+id/mainActivity_Button_Revision"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="30px"
+                    android:text="調整偵測區"
+                    android:textColor="@android:color/black" />
+
+                <Button
+                    android:id="@+id/mainActivity_Button_NextPage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="30px"
+                    android:gravity="center"
+                    android:text="NextPage" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/InputRelativeLayiut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ButtonLinearLayout">
+
+                <LinearLayout
+                    android:id="@+id/Input1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/mainActivity_TextView_LeftTopX"
+                        android:layout_width="wrap_content"
+                        android:layout_height="65px"
+                        android:gravity="center"
+                        android:padding="10px"
+                        android:text="左上X:"
+                        android:textSize="40px" />
+
+                    <EditText
+                        android:id="@+id/mainActivity_EditText_LeftTopX_editText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="65px"
+                        android:layout_alignBottom="@id/mainActivity_TextView_LeftTopX"
+                        android:layout_toRightOf="@+id/mainActivity_TextView_LeftTopX"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:padding="10px"
+                        android:textSize="40px"
+                        android:inputType="phone" />
+
+
+                    <TextView
+                        android:id="@+id/mainActivity_TextView_LeftTopY"
+                        android:layout_width="wrap_content"
+                        android:layout_height="65px"
+                        android:layout_alignBottom="@id/mainActivity_TextView_LeftTopX"
+                        android:layout_toRightOf="@+id/mainActivity_EditText_LeftTopX_editText"
+                        android:gravity="center"
+                        android:text="Y:"
+                        android:padding="10px"
+                        android:textSize="40px" />
+
+                    <EditText
+                        android:id="@+id/mainActivity_EditText_LeftTopY_editText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="65px"
+                        android:layout_alignBottom="@id/mainActivity_TextView_LeftTopX"
+                        android:layout_toRightOf="@+id/mainActivity_TextView_LeftTopY"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:inputType="phone"
+                        android:padding="10px"
+                        android:textSize="40px"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/Input2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/Input1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/mainActivity_TextView_LeftDownX"
+                        android:layout_width="wrap_content"
+                        android:layout_height="65px"
+                        android:gravity="center"
+                        android:text="左下X:"
+                        android:padding="10px"
+                        android:textSize="40px" />
+
+                    <EditText
+                        android:id="@+id/mainActivity_EditText_LeftDownX_editText"
+                        android:layout_width="100px"
+                        android:layout_height="65px"
+                        android:layout_alignBottom="@id/mainActivity_TextView_LeftDownX"
+                        android:layout_toRightOf="@+id/mainActivity_TextView_LeftDownX"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:inputType="phone"
+                        android:padding="10px"
+                        android:textSize="40px"/>
+
+
+                    <TextView
+                        android:id="@+id/mainActivity_TextView_LeftDownY"
+                        android:layout_width="wrap_content"
+                        android:layout_height="65px"
+                        android:layout_alignBottom="@id/mainActivity_EditText_LeftDownX_editText"
+                        android:layout_toRightOf="@+id/mainActivity_EditText_LeftDownX_editText"
+                        android:gravity="center"
+                        android:text="Y:"
+                        android:padding="10px"
+                        android:textSize="40px" />
+
+                    <EditText
+                        android:id="@+id/mainActivity_EditText_LeftDownY_editText"
+                        android:layout_width="100px"
+                        android:layout_height="65px"
+                        android:layout_alignBottom="@id/mainActivity_TextView_LeftDownY"
+                        android:layout_toRightOf="@+id/mainActivity_TextView_LeftDownY"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:inputType="phone"
+                        android:padding="10px"
+                        android:textSize="40px"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/Input3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/Input2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/mainActivity_TextView_RightTopX"
+                        android:layout_width="wrap_content"
+                        android:layout_height="65px"
+                        android:text="右上X:"
+                        android:gravity="center"
+                        android:padding="10px"
+                        android:textSize="40px" />
+
+                    <EditText
+                        android:id="@+id/mainActivity_EditText_RightTopX_editText"
+                        android:layout_width="100px"
+                        android:layout_height="65px"
+                        android:layout_alignBottom="@id/mainActivity_TextView_RightTopX"
+                        android:layout_toRightOf="@+id/mainActivity_TextView_RightTopX"
+                        android:layout_weight="1"
+                        android:inputType="phone"
+                        android:gravity="center_vertical"
+                        android:padding="10px"
+                        android:textSize="40px"/>
+
+
+                    <TextView
+                        android:id="@+id/mainActivity_TextView_RightTopY"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/mainActivity_EditText_RightTopX_editText"
+                        android:layout_toRightOf="@+id/mainActivity_EditText_RightTopX_editText"
+                        android:text="Y:"
+                        android:gravity="center"
+                        android:padding="10px"
+                        android:textSize="40px" />
+
+                    <EditText
+                        android:id="@+id/mainActivity_EditText_RightTopY_editText"
+                        android:layout_width="100px"
+                        android:layout_height="65px"
+                        android:layout_alignBottom="@id/mainActivity_TextView_RightTopY"
+                        android:layout_toRightOf="@+id/mainActivity_TextView_RightTopY"
+                        android:layout_weight="1"
+                        android:inputType="phone"
+                        android:gravity="center_vertical"
+                        android:padding="10px"
+                        android:textSize="40px"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/Input4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/Input3"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/mainActivity_TextView_RightDownX"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/mainActivity_TextView_RightDownX"
+                        android:text="右下X:"
+                        android:gravity="center"
+                        android:padding="10px"
+                        android:textSize="40px" />
+
+                    <EditText
+                        android:id="@+id/mainActivity_EditText_RightDownX_editText"
+                        android:layout_width="100px"
+                        android:layout_height="65px"
+                        android:layout_alignBottom="@id/mainActivity_TextView_RightDownX"
+                        android:layout_toRightOf="@+id/mainActivity_TextView_RightDownX"
+                        android:layout_weight="1"
+                        android:inputType="phone"
+                        android:padding="10px"
+                        android:textSize="40px"/>
+
+
+                    <TextView
+                        android:id="@+id/mainActivity_TextView_RightDownY"
+                        android:layout_width="wrap_content"
+                        android:layout_height="65px"
+                        android:layout_alignBottom="@id/mainActivity_EditText_RightDownX_editText"
+                        android:layout_toRightOf="@+id/mainActivity_EditText_RightDownX_editText"
+                        android:text="Y:"
+                        android:gravity="center"
+                        android:padding="10px"
+                        android:textSize="40px" />
+
+                    <EditText
+                        android:id="@+id/mainActivity_EditText_RightDownY_editText"
+                        android:layout_width="100px"
+                        android:layout_height="65px"
+                        android:layout_alignBottom="@id/mainActivity_TextView_RightDownY"
+                        android:layout_toRightOf="@+id/mainActivity_TextView_RightDownY"
+                        android:layout_weight="1"
+                        android:inputType="phone"
+                        android:gravity="center_vertical"
+                        android:padding="10px"
+                        android:textSize="40px"/>
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/KernelRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/InputRelativeLayiut">
+
+                <LinearLayout
+                    android:id="@+id/KernelTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/mainActivity_TextView_KernelText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="高斯 Kernel 參數"
+                        android:padding="10px"
+                        android:textSize="40px" />
+
+                    <TextView
+                        android:id="@+id/mainActivity_TextView_KernelValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5"
+                        android:padding="10px"
+                        android:textSize="40px" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/KernelDown"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/KernelTop"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/mainActivity_TextView_KernelMin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:padding="10px"
+                        android:textSize="40px" />
+
+                    <SeekBar
+                        android:id="@+id/mainActivity_SeekBar_Kernel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/mainActivity_TextView_KernelMin"
+                        android:layout_toRightOf="@+id/mainActivity_TextView_KernelMin"
+                        android:layout_weight="1"
+                        android:max="100"
+                        android:progress="0" />
+
+                    <TextView
+                        android:id="@+id/mainActivity_TextView_KernelMax"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/mainActivity_SeekBar_Kernel"
+                        android:text="100"
+                        android:padding="10px"
+                        android:textSize="40px" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/AutoCannyRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/KernelRelativeLayout">
+
+                <LinearLayout
+                    android:id="@+id/AutoCannyTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/mainActivity_TextView_AutoCannyText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="AutoCanny"
+                        android:padding="10px"
+                        android:textSize="40px" />
+
+                    <TextView
+                        android:id="@+id/mainActivity_TextView_AutoCannyValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.33"
+                        android:padding="10px"
+                        android:textSize="40px" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/AutoCannyDown"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/AutoCannyTop"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/mainActivity_TextView_AutoCannyMin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:padding="10px"
+                        android:textSize="40px" />
+
+                    <SeekBar
+                        android:id="@+id/mainActivity_SeekBar_AutoCanny"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/mainActivity_TextView_AutoCannyMin"
+                        android:layout_toRightOf="@+id/mainActivity_TextView_AutoCannyMin"
+                        android:layout_weight="1"
+                        android:max="500"
+                        android:progress="0" />
+
+                    <TextView
+                        android:id="@+id/mainActivity_TextView_AutoCannyMax"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/mainActivity_SeekBar_AutoCanny"
+                        android:padding="10px"
+                        android:text="5"
+                        android:textSize="40px" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/YellowToWhileRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:layout_below="@id/AutoCannyRelativeLayout">
+
+                <ImageView
+                    android:id="@+id/mainActivity_ImageView_YellowToWhile"
+                    android:layout_width="960px"
+                    android:layout_height="540px"
+                    android:scaleType="centerCrop"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:id="@+id/mainActivity_TextView_YellowToWhile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/mainActivity_ImageView_YellowToWhile"
+                    android:layout_alignTop="@id/mainActivity_ImageView_YellowToWhile"
+                    android:text="yellowToWhile"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:padding="10px"
+                    android:textSize="40px" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/GrayScaleRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:layout_below="@id/YellowToWhileRelativeLayout">
+
+                <ImageView
+                    android:id="@+id/mainActivity_ImageView_GrayScale"
+                    android:layout_width="960px"
+                    android:layout_height="540px"
+                    android:scaleType="centerCrop"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:id="@+id/mainActivity_TextView_GrayScale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/mainActivity_ImageView_GrayScale"
+                    android:layout_alignTop="@id/mainActivity_ImageView_GrayScale"
+                    android:text="grayscale"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:padding="10px"
+                    android:textSize="40px" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/Gaussian_BlurRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:layout_below="@id/GrayScaleRelativeLayout">
+
+                <ImageView
+                    android:id="@+id/mainActivity_ImageView_Gaussian_Blur"
+                    android:layout_width="960px"
+                    android:layout_height="540px"
+                    android:scaleType="centerCrop"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:id="@+id/mainActivity_TextView_Gaussian_Blur"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/mainActivity_ImageView_Gaussian_Blur"
+                    android:layout_alignTop="@id/mainActivity_ImageView_Gaussian_Blur"
+                    android:text="gaussian_blur"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:padding="10px"
+                    android:textSize="40px" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/Auto_CannyRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:layout_below="@id/Gaussian_BlurRelativeLayout">
+
+                <ImageView
+                    android:id="@+id/mainActivity_ImageView_Auto_Canny"
+                    android:layout_width="960px"
+                    android:layout_height="540px"
+                    android:scaleType="centerCrop"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:id="@+id/mainActivity_TextView_Auto_Canny"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/mainActivity_ImageView_Auto_Canny"
+                    android:layout_alignTop="@id/mainActivity_ImageView_Auto_Canny"
+                    android:text="auto_canny"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:padding="10px"
+                    android:textSize="40px" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/Region_Of_InterestRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:layout_below="@id/Auto_CannyRelativeLayout">
+
+                <ImageView
+                    android:id="@+id/mainActivity_ImageView_Region_Of_Interest"
+                    android:layout_width="960px"
+                    android:layout_height="540px"
+                    android:scaleType="centerCrop"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:id="@+id/mainActivity_TextView_Region_Of_Interest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/mainActivity_ImageView_Region_Of_Interest"
+                    android:layout_alignTop="@id/mainActivity_ImageView_Region_Of_Interest"
+                    android:text="region_of_interest"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:padding="10px"
+                    android:textSize="40px" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/RhoRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Region_Of_InterestRelativeLayout">
+
+                <LinearLayout
+                    android:id="@+id/RhoTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/mainactivity_TextView_RhoText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="RHO"
+                        android:padding="10px"
+                        android:textSize="40px" />
+
+                    <TextView
+                        android:id="@+id/mainactivity_TextView_RhoValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1.0"
+                        android:padding="10px"
+                        android:textSize="40px" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/RhoCenter"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/RhoTop"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/mainactivity_TextView_RhoMin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:padding="10px"
+                        android:textSize="40px" />
+
+                    <SeekBar
+                        android:id="@+id/mainactivity_SeekBar_Rho"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/mainactivity_TextView_RhoMin"
+                        android:layout_toRightOf="@+id/mainactivity_TextView_RhoMin"
+                        android:layout_weight="1"
+                        android:max="100"
+                        android:progress="0" />
+
+                    <TextView
+                        android:id="@+id/mainactivity_TextView_RhoMax"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/mainactivity_SeekBar_Rho"
+                        android:text="100"
+                        android:padding="10px"
+                        android:textSize="40px" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/RhoDown"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/RhoCenter"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/mainactivity_TextView_RhoCaption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/mainactivity_SeekBar_Rho"
+                        android:text="Distance resolution of the accumulator in pixels."
+                        android:padding="10px"
+                        android:textSize="40px" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/ThetaRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/RhoRelativeLayout">
+
+                <LinearLayout
+                    android:id="@+id/ThetaTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/mainactivity_TextView_ThetaText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="THETA"
+                        android:padding="10px"
+                        android:textSize="40px" />
+
+                    <TextView
+                        android:id="@+id/mainactivity_TextView_ThetaValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:padding="10px"
+                        android:textSize="40px" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ThetaCenter"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/ThetaTop"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/mainactivity_TextView_ThetaMin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:padding="10px"
+                        android:textSize="40px" />
+
+                    <SeekBar
+                        android:id="@+id/mainactivity_SeekBar_Theta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/mainactivity_TextView_ThetaMin"
+                        android:layout_toRightOf="@+id/mainactivity_TextView_ThetaMin"
+                        android:layout_weight="1"
+                        android:max="100"
+                        android:progress="0" />
+
+                    <TextView
+                        android:id="@+id/mainactivity_TextView_ThetaMax"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/mainactivity_SeekBar_Theta"
+                        android:text="100"
+                        android:padding="10px"
+                        android:textSize="40px" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ThetaDown"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/ThetaCenter"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/mainactivity_TextView_ThetaCaption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/mainactivity_SeekBar_Theta"
+                        android:text="Angle resolution of the accumulator in radians."
+                        android:padding="10px"
+                        android:textSize="40px" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ThresholdRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ThetaRelativeLayout">
+
+                <LinearLayout
+                    android:id="@+id/ThresholdTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/mainactivity_TextView_ThresholdText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="THRESHOLD"
+                        android:padding="10px"
+                        android:textSize="40px" />
+
+                    <TextView
+                        android:id="@+id/mainactivity_TextView_ThresholdValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20"
+                        android:padding="10px"
+                        android:textSize="40px" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ThresholdCenter"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/ThresholdTop"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/mainactivity_TextView_ThresholdMin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:padding="10px"
+                        android:textSize="40px" />
+
+                    <SeekBar
+                        android:id="@+id/mainactivity_SeekBar_Threshold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/mainactivity_TextView_ThresholdMin"
+                        android:layout_toRightOf="@+id/mainactivity_TextView_ThresholdMin"
+                        android:layout_weight="1"
+                        android:max="100"
+                        android:progress="0" />
+
+                    <TextView
+                        android:id="@+id/mainactivity_TextView_ThresholdMax"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/mainactivity_SeekBar_Threshold"
+                        android:text="100"
+                        android:padding="10px"
+                        android:textSize="40px" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ThresholdDown"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/ThresholdCenter"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/mainactivity_TextView_ThresholdCaption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/mainactivity_SeekBar_Threshold"
+                        android:text="Accumulator threshold parameter. Only those lines are returned that get enough votes(>threshold)"
+                        android:textSize="30px" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/MinLineLengthRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ThresholdRelativeLayout">
+
+                <LinearLayout
+                    android:id="@+id/MinLineLengthTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/mainactivity_TextView_MinLineLengthText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="minLineLength"
+                        android:padding="10px"
+                        android:textSize="40px" />
+
+                    <TextView
+                        android:id="@+id/mainactivity_TextView_MinLineLengthValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5"
+                        android:padding="10px"
+                        android:textSize="40px" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/MinLineLengthCenter"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/MinLineLengthTop"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/mainactivity_TextView_MinLineLengthMin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:padding="10px"
+                        android:textSize="40px" />
+
+                    <SeekBar
+                        android:id="@+id/mainactivity_SeekBar_MinLineLength"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/mainactivity_TextView_MinLineLengthMin"
+                        android:layout_toRightOf="@+id/mainactivity_TextView_MinLineLengthMin"
+                        android:layout_weight="1"
+                        android:max="100"
+                        android:progress="0" />
+
+                    <TextView
+                        android:id="@+id/mainactivity_TextView_MinLineLengthMax"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/mainactivity_SeekBar_MinLineLength"
+                        android:text="100"
+                        android:padding="10px"
+                        android:textSize="40px" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/MinLineLengthDown"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/MinLineLengthCenter"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/mainactivity_TextView_MinLineLengthCaption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/mainactivity_SeekBar_MinLineLength"
+                        android:text="Minimum line length. Line segments shorter than that are rejected."
+                        android:textSize="30px" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/MaxLinrGapRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/MinLineLengthRelativeLayout">
+
+                <LinearLayout
+                    android:id="@+id/MaxLinrGapTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/mainactivity_TextView_MaxLinrGapText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="maxLinrGap"
+                        android:padding="10px"
+                        android:textSize="40px" />
+
+                    <TextView
+                        android:id="@+id/mainactivity_TextView_MaxLinrGapValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5"
+                        android:padding="10px"
+                        android:textSize="40px" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/MaxLinrGapCenter"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/MaxLinrGapTop"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/mainactivity_TextView_MaxLinrGapMin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:padding="10px"
+                        android:textSize="40px" />
+
+                    <SeekBar
+                        android:id="@+id/mainactivity_SeekBar_MaxLinrGap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/mainactivity_TextView_MaxLinrGapMin"
+                        android:layout_toRightOf="@+id/mainactivity_TextView_MaxLinrGapMin"
+                        android:layout_weight="1"
+                        android:max="100"
+                        android:progress="0" />
+
+                    <TextView
+                        android:id="@+id/mainactivity_TextView_MaxLinrGapMax"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/mainactivity_SeekBar_MaxLinrGap"
+                        android:text="100"
+                        android:padding="10px"
+                        android:textSize="40px" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/MaxLinrGapDown"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/MaxLinrGapCenter"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/mainactivity_TextView_MaxLinrGapCaption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/mainactivity_SeekBar_MaxLinrGap"
+                        android:text="Maximum allowed gap between points on the same line to link them."
+                        android:textSize="30px" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/Only_Hough_LineRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:layout_below="@id/MaxLinrGapRelativeLayout">
+
+                <ImageView
+                    android:id="@+id/mainActivity_ImageView_Only_Hough_Line"
+                    android:layout_width="960px"
+                    android:layout_height="540px"
+                    android:scaleType="centerCrop"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:id="@+id/mainActivity_TextView_Only_Hough_Line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/mainActivity_ImageView_Only_Hough_Line"
+                    android:layout_alignTop="@id/mainActivity_ImageView_Only_Hough_Line"
+                    android:text="only_hough_line"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:padding="10px"
+                    android:textSize="40px" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/CheckPosSlopesRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Only_Hough_LineRelativeLayout">
+
+                <LinearLayout
+                    android:id="@+id/CheckPosSlopesTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/mainactivity_TextView_CheckPosSlopesText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="CheckPosSlopes"
+                        android:padding="10px"
+                        android:textSize="40px" />
+
+                    <TextView
+                        android:id="@+id/mainactivity_TextView_CheckPosSlopesValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.5"
+                        android:padding="10px"
+                        android:textSize="40px" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/CheckPosSlopesDown"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/CheckPosSlopesTop"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/mainactivity_TextView_CheckPosSlopesMin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:padding="10px"
+                        android:textSize="40px" />
+
+                    <SeekBar
+                        android:id="@+id/mainactivity_SeekBar_CheckPosSlopes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/mainactivity_TextView_CheckPosSlopesMin"
+                        android:layout_toRightOf="@+id/mainactivity_TextView_CheckPosSlopesMin"
+                        android:layout_weight="1"
+                        android:max="100"
+                        android:progress="0" />
+
+                    <TextView
+                        android:id="@+id/mainactivity_TextView_CheckPosSlopesMax"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/mainactivity_SeekBar_CheckPosSlopes"
+                        android:text="10"
+                        android:padding="10px"
+                        android:textSize="40px" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/CheckNegSlopesRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/CheckPosSlopesRelativeLayout">
+
+                <LinearLayout
+                    android:id="@+id/CheckNegSlopesTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/mainactivity_TextView_CheckNegSlopesText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="CheckNegSlopes"
+                        android:padding="10px"
+                        android:textSize="40px" />
+
+                    <TextView
+                        android:id="@+id/mainactivity_TextView_CheckNegSlopesValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-0.0"
+                        android:padding="10px"
+                        android:textSize="40px" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/CheckNegSlopesDown"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/CheckNegSlopesTop"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/mainactivity_TextView_CheckNegSlopesMin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:padding="10px"
+                        android:textSize="40px" />
+
+                    <SeekBar
+                        android:id="@+id/mainactivity_SeekBar_CheckNegSlopes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/mainactivity_TextView_CheckNegSlopesMin"
+                        android:layout_toRightOf="@+id/mainactivity_TextView_CheckNegSlopesMin"
+                        android:layout_weight="1"
+                        android:max="100"
+                        android:progress="0" />
+
+                    <TextView
+                        android:id="@+id/mainactivity_TextView_CheckNegSlopesMax"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/mainactivity_SeekBar_CheckNegSlopes"
+                        android:text="10"
+                        android:padding="10px"
+                        android:textSize="40px" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/Hough_LinesRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:layout_below="@id/CheckNegSlopesRelativeLayout">
+
+                <ImageView
+                    android:id="@+id/mainActivity_ImageView_Hough_Lines"
+                    android:layout_width="960px"
+                    android:layout_height="540px"
+                    android:scaleType="centerCrop"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:id="@+id/mainActivity_TextView_Hough_Lines"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/mainActivity_ImageView_Hough_Lines"
+                    android:layout_alignTop="@id/mainActivity_ImageView_Hough_Lines"
+                    android:text="hough_lines"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:padding="10px"
+                    android:textSize="40px" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ResultRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:layout_below="@id/Hough_LinesRelativeLayout">
+
+                <ImageView
+                    android:id="@+id/mainActivity_ImageView_Result"
+                    android:layout_width="960px"
+                    android:layout_height="540px"
+                    android:scaleType="centerCrop"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:id="@+id/mainActivity_TextView_Result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/mainActivity_ImageView_Result"
+                    android:layout_alignTop="@id/mainActivity_ImageView_Result"
+                    android:text="Result"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:padding="10px"
+                    android:textSize="40px" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/Result2RelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:layout_below="@id/ResultRelativeLayout">
+
+                <ImageView
+                    android:id="@+id/mainActivity_ImageView_Result2"
+                    android:layout_width="960px"
+                    android:layout_height="540px"
+                    android:scaleType="fitXY"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:id="@+id/mainActivity_TextView_Result2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/mainActivity_ImageView_Result2"
+                    android:layout_alignTop="@id/mainActivity_ImageView_Result2"
+                    android:text="Result2"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:padding="10px"
+                    android:textSize="40px" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/OutputRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Result2RelativeLayout">
+
+
+                <TextView
+                    android:id="@+id/mainActivity_TextView_LinesText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lines: "
+                    android:padding="10px"
+                    android:textSize="40px" />
+
+                <TextView
+                    android:id="@+id/mainActivity_TextView_LinesOutput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/mainActivity_TextView_LinesText"
+                    android:layout_alignBottom="@+id/mainActivity_TextView_LinesText"
+                    android:text="TextView"
+                    android:padding="10px"
+                    android:textSize="40px" />
+
+                <TextView
+                    android:id="@+id/mainActivity_TextView_SlopeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mainActivity_TextView_LinesText"
+                    android:text="Slope: "
+                    android:padding="10px"
+                    android:textSize="40px" />
+                <TextView
+                    android:id="@+id/mainActivity_TextView_SlopeOutput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/mainActivity_TextView_SlopeText"
+                    android:layout_alignBottom="@+id/mainActivity_TextView_SlopeText"
+                    android:text="a"
+                    android:padding="10px"
+                    android:textSize="40px" />
+                <TextView
+                    android:id="@+id/mainActivity_TextView_SlopeOutput2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mainActivity_TextView_SlopeText"
+                    android:layout_toRightOf="@+id/mainActivity_TextView_SlopeText"
+                    android:text="TextView"
+                    android:padding="10px"
+                    android:textSize="40px" />
+
+
+                <TextView
+                    android:id="@+id/mainActivity_TextView_InterceptText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mainActivity_TextView_SlopeOutput2"
+                    android:text="intercept:"
+                    android:padding="10px"
+                    android:textSize="40px" />
+                <TextView
+                    android:id="@+id/mainActivity_TextView_InterceptOutput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/mainActivity_TextView_InterceptText"
+                    android:layout_alignBottom="@+id/mainActivity_TextView_InterceptText"
+                    android:text="TextView"
+                    android:padding="10px"
+                    android:textSize="40px" />
+                <TextView
+                    android:id="@+id/mainActivity_TextView_InterceptOutput2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mainActivity_TextView_InterceptText"
+                    android:layout_toRightOf="@+id/mainActivity_TextView_InterceptText"
+                    android:text="TextView"
+                    android:padding="10px"
+                    android:textSize="40px" />
+
+                <TextView
+                    android:id="@+id/mainActivity_TextView_P1Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mainActivity_TextView_InterceptOutput2"
+                    android:text="P1: "
+                    android:padding="10px"
+                    android:textSize="40px" />
+
+                <TextView
+                    android:id="@+id/mainActivity_TextView_P1Output"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/mainActivity_TextView_P1Text"
+                    android:layout_alignBottom="@+id/mainActivity_TextView_P1Text"
+                    android:text="TextView"
+                    android:padding="10px"
+                    android:textSize="40px" />
+
+                <TextView
+                    android:id="@+id/mainActivity_TextView_P2Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mainActivity_TextView_P1Output"
+                    android:text="P2: "
+                    android:padding="10px"
+                    android:textSize="40px" />
+
+                <TextView
+                    android:id="@+id/mainActivity_TextView_P2Output"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/mainActivity_TextView_P2Text"
+                    android:layout_alignBottom="@+id/mainActivity_TextView_P2Text"
+                    android:text="TextView"
+                    android:padding="10px"
+                    android:textSize="40px" />
+
+                <TextView
+                    android:id="@+id/mainActivity_TextView_P3Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mainActivity_TextView_P2Output"
+                    android:text="P3: "
+                    android:padding="10px"
+                    android:textSize="40px" />
+
+                <TextView
+                    android:id="@+id/mainActivity_TextView_P3Output"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/mainActivity_TextView_P3Text"
+                    android:layout_alignBottom="@+id/mainActivity_TextView_P3Text"
+                    android:text="TextView"
+                    android:padding="10px"
+                    android:textSize="40px" />
+
+                <TextView
+                    android:id="@+id/mainActivity_TextView_P4Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mainActivity_TextView_P3Output"
+                    android:text="P4: "
+                    android:padding="10px"
+                    android:textSize="40px" />
+
+                <TextView
+                    android:id="@+id/mainActivity_TextView_P4Output"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/mainActivity_TextView_P4Text"
+                    android:layout_alignBottom="@+id/mainActivity_TextView_P4Text"
+                    android:text="TextView"
+                    android:padding="10px"
+                    android:textSize="40px" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mainActivity_LinearLayout_powerArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/OutputRelativeLayout">
+
+                <TextView
+                    android:id="@+id/mainActivity_TextView_powerTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="65px"
+                    android:padding="10px"
+                    android:textSize="40px"
+                    android:text="最大輸出動力："/>
+
+                <EditText
+                    android:id="@+id/mainActivity_TextView_inputPower"
+                    android:layout_width="match_parent"
+                    android:layout_height="65px"
+                    android:layout_toRightOf="@+id/mainActivity_TextView_powerTitle"
+                    android:padding="10px"
+                    android:textSize="40px"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mainActivity_LinearLayout_turnArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mainActivity_LinearLayout_powerArea">
+
+                <TextView
+                    android:id="@+id/mainActivity_TextView_turnAreaTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="65px"
+                    android:padding="10px"
+                    android:textSize="40px"
+                    android:text="最大左右輸出動力："/>
+
+                <EditText
+                    android:id="@+id/mainActivity_TextView_inputTurnArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="65px"
+                    android:layout_toRightOf="@+id/mainActivity_TextView_turnAreaTitle"
+                    android:padding="10px"
+                    android:textSize="40px"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.opencv.samples.facedetect.ReviewRecordDataActivity">
+
+    <RelativeLayout
+        android:id="@+id/ReviewRecordDataActivity_RelativeLayout_ListContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/ReviewRecordDataActivity_ListView_ShowRecordFileName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_above="@+id/ReviewRecordDataActivity_Button_importDataBase"/>
+
+        <Button
+            android:id="@+id/ReviewRecordDataActivity_Button_importDataBase"
+            android:layout_width="match_parent"
+            android:layout_height="75px"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_above="@+id/ReviewRecordDataActivity_Button_exportDataBase"
+            android:textSize="35px"
+            android:text="滙入資料庫"/>
+
+        <Button
+            android:id="@+id/ReviewRecordDataActivity_Button_exportDataBase"
+            android:layout_width="match_parent"
+            android:layout_height="75px"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:textSize="35px"
+            android:text="滙出資料庫"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ReviewRecordDataActivity_RelativeLayout_VideoFrameContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/ReviewRecordDataActivity_ImageView_ShowFrame"
+            android:layout_width="320px"
+            android:layout_height="240px"
+            android:scaleType="fitXY"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20px"
+            android:layout_centerHorizontal="true"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/ReviewRecordDataActivity_LinearLayout_ShowFrameInfo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ReviewRecordDataActivity_ImageView_ShowFrame"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true">
+
+            <TextView
+                android:id="@+id/ReviewRecordDataActivity_TextView_ShowFileName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10px"
+                android:textSize="35px"
+                android:gravity="center_vertical"/>
+
+            <TextView
+                android:id="@+id/ReviewRecordDataActivity_TextView_ShowChannel1Value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10px"
+                android:textSize="35px"
+                android:gravity="center_vertical"/>
+
+            <TextView
+                android:id="@+id/ReviewRecordDataActivity_TextView_ShowChannel2Value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10px"
+                android:textSize="35px"
+                android:gravity="center_vertical"/>
+
+            <TextView
+                android:id="@+id/ReviewRecordDataActivity_TextView_ShowSaveTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10px"
+                android:textSize="35px"
+                android:gravity="center_vertical"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/ReviewRecordDataActivity_LinearLayout_ButtonContainer"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:padding="10px"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/ReviewRecordDataActivity_Button_PreFrame"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="35px"
+                    android:text="PreFrame"/>
+
+                <Button
+                    android:id="@+id/ReviewRecordDataActivity_Button_NextFrame"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10px"
+                    android:layout_weight="1"
+                    android:textSize="35px"
+                    android:text="NextFrame"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

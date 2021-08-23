@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.opencv.samples.facedetect"
+    android:versionCode="1"
+    android:versionName="00.01.05">
+
+    <uses-sdk android:minSdkVersion="8" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front.autofocus"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- <uses-permission android:name="android.permission.READ_PHONE_STATE" /> -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name=".Air"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@android:style/Theme.Holo.Light.NoActionBar">
+        <service
+            android:name="com.v7idea.Service.ClientService"
+            android:enabled="true" />
+
+        <activity
+            android:name=".FdActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ChannelSettingPage"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.v7idea.landdetecttest.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".VideoFrameListPage"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ChangeDetectionParamsPage"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ShowAllSettingPage"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ScanBluetoothDevicePage"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ChooseModeActivity"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".CommandActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".UsbWebCamActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".RemoteControlPage"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".RemoteControlSettingPage"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".RemoteControlChannelSetting"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".EntryPage"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ReviewRecordDataActivity"
+            android:screenOrientation="portrait">
+        </activity>
+    </application>
+
+</manifest>

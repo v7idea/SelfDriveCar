@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.v7idea.tool.CVCameraWrapper
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ChangeDetectionParams_CVCameraWrapper_SurfaceView"/>
+
+    <ImageView
+        android:id="@+id/ChangeDetectionParams_ImageView_touchPannel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:id="@+id/customView1"
+        android:layout_width="80px"
+        android:layout_height="80px"/>
+
+    <TextView
+        android:id="@+id/customView2"
+        android:layout_width="80px"
+        android:layout_height="80px"/>
+
+    <TextView
+        android:id="@+id/customView3"
+        android:layout_width="80px"
+        android:layout_height="80px"/>
+
+    <TextView
+        android:id="@+id/customView4"
+        android:layout_width="80px"
+        android:layout_height="80px"/>
+
+    <RelativeLayout
+        android:id="@+id/PageAll"
+        android:layout_width="match_parent"
+        android:layout_height="180px"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:background="#F0282828">
+
+        <Button
+            android:id="@+id/Button_Left"
+            android:layout_width="80px"
+            android:layout_height="80px"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50px"
+            android:layout_marginLeft="30px"
+            android:background="@drawable/reference_line_selector"
+            android:textSize="40px"
+            android:text="L" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/Button_Left"
+            android:layout_toLeftOf="@+id/Button_Right"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:id="@+id/Page1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <com.v7idea.template.View.CustomView_SeekBar
+                    android:id="@+id/Kernel"
+                    android:layout_width="match_parent"
+                    android:layout_height="60px"
+                    android:orientation="horizontal" />
+
+                <com.v7idea.template.View.CustomView_SeekBar
+                    android:id="@+id/AutoCanny"
+                    android:layout_width="match_parent"
+                    android:layout_height="60px"
+                    android:orientation="horizontal" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Page2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <com.v7idea.template.View.CustomView_SeekBar
+                    android:id="@+id/Rho"
+                    android:layout_width="match_parent"
+                    android:layout_height="60px"
+                    android:orientation="horizontal" />
+
+                <com.v7idea.template.View.CustomView_SeekBar
+                    android:id="@+id/Theta"
+                    android:layout_width="match_parent"
+                    android:layout_height="60px"
+                    android:orientation="horizontal" />
+
+                <com.v7idea.template.View.CustomView_SeekBar
+                    android:id="@+id/Threshold"
+                    android:layout_width="match_parent"
+                    android:layout_height="60px"
+                    android:orientation="horizontal" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Page3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.v7idea.template.View.CustomView_SeekBar
+                    android:id="@+id/MinLineLength"
+                    android:layout_width="match_parent"
+                    android:layout_height="60px"
+                    android:orientation="horizontal" />
+
+                <com.v7idea.template.View.CustomView_SeekBar
+                    android:id="@+id/MaxLinrGap"
+                    android:layout_width="match_parent"
+                    android:layout_height="60px"
+                    android:orientation="horizontal" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Page4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.v7idea.template.View.CustomView_SeekBar
+                    android:id="@+id/CheckPositiveSlopes"
+                    android:layout_width="match_parent"
+                    android:layout_height="60px"
+                    android:orientation="horizontal" />
+
+                <com.v7idea.template.View.CustomView_SeekBar
+                    android:id="@+id/CheckNegitiveSlopes"
+                    android:layout_width="match_parent"
+                    android:layout_height="60px"
+                    android:orientation="horizontal" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Page5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.v7idea.template.View.CustomView_SeekBar
+                    android:id="@+id/DetectionError"
+                    android:layout_width="match_parent"
+                    android:layout_height="60px"
+                    android:orientation="horizontal" />
+
+                <com.v7idea.template.View.CustomView_SeekBar
+                    android:id="@+id/ForwardPower"
+                    android:layout_width="match_parent"
+                    android:layout_height="60px"
+                    android:orientation="horizontal" />
+
+                <com.v7idea.template.View.CustomView_SeekBar
+                    android:id="@+id/LeftAndRight"
+                    android:layout_width="match_parent"
+                    android:layout_height="60px"
+                    android:orientation="horizontal" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/Button_Right"
+            android:layout_width="80px"
+            android:layout_height="80px"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50px"
+            android:layout_marginRight="30px"
+            android:background="@drawable/reference_line_selector"
+            android:textSize="40px"
+            android:text="R" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/Button_Back"
+        android:layout_width="140px"
+        android:layout_height="100px"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:textSize="40px"
+        android:background="@drawable/button_selector"
+        android:textColor="@android:color/black"
+        android:alpha="0.95"
+        android:text="返回" />
+
+    <Button
+        android:id="@+id/Button_leftReferenceLine"
+        android:layout_width="140px"
+        android:layout_height="100px"
+        android:layout_toRightOf="@+id/Button_Back"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10px"
+        android:textSize="30px"
+        android:background="@drawable/button_selector"
+        android:textColor="@android:color/black"
+        android:alpha="0.95"
+        android:text="左參考線"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/Button_rightReferentLine"
+        android:layout_width="140px"
+        android:layout_height="100px"
+        android:layout_toRightOf="@+id/Button_leftReferenceLine"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10px"
+        android:textSize="30px"
+        android:background="@drawable/button_selector"
+        android:textColor="@android:color/black"
+        android:alpha="0.95"
+        android:text="右參考線"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/Button_SendParameters"
+        android:layout_width="140px"
+        android:layout_height="100px"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/Button_Back"
+        android:layout_marginTop="10px"
+        android:textSize="40px"
+        android:background="@drawable/button_selector"
+        android:textColor="@android:color/black"
+        android:alpha="0.95"
+        android:text="發送"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/Button_Servo"
+        android:layout_width="140px"
+        android:layout_height="100px"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/Button_Save"
+        android:layout_marginRight="10px"
+        android:textSize="40px"
+        android:background="@drawable/button_selector"
+        android:textColor="@android:color/black"
+        android:alpha="0.95"
+        android:text="Servo" />
+
+    <Button
+        android:id="@+id/Button_ScaneDevice"
+        android:layout_width="140px"
+        android:layout_height="100px"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/Button_Servo"
+        android:layout_marginRight="10px"
+        android:textSize="30px"
+        android:background="@drawable/button_selector"
+        android:textColor="@android:color/black"
+        android:alpha="0.95"
+        android:text="裝置掃瞄" />
+
+
+    <Button
+        android:id="@+id/Button_Save"
+        android:layout_width="140px"
+        android:layout_height="100px"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/Button_Load"
+        android:textSize="40px"
+        android:background="@drawable/button_selector"
+        android:textColor="@android:color/black"
+        android:layout_marginRight="10px"
+        android:alpha="0.95"
+        android:text="Save" />
+
+    <Button
+        android:id="@+id/Button_Load"
+        android:layout_width="140px"
+        android:layout_height="100px"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/Button_Paint"
+        android:textSize="40px"
+        android:layout_marginRight="10px"
+        android:background="@drawable/button_selector"
+        android:textColor="@android:color/black"
+        android:alpha="0.95"
+        android:text="Load" />
+
+    <Button
+        android:id="@+id/Button_Paint"
+        android:layout_width="140px"
+        android:layout_height="100px"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:textSize="40px"
+        android:background="@drawable/button_selector"
+        android:textColor="@android:color/black"
+        android:alpha="0.95"
+        android:text="畫筆" />
+
+
+    <Button
+        android:id="@+id/Button_Ok"
+        android:layout_width="140px"
+        android:layout_height="100px"
+        android:layout_alignParentEnd="true"
+        android:textSize="40px"
+        android:background="@drawable/button_selector"
+        android:textColor="@android:color/black"
+        android:alpha="0.95"
+        android:text="OK"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/Button_Clear"
+        android:layout_width="140px"
+        android:layout_height="100px"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/Button_Ok"
+        android:background="@drawable/button_selector"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="10px"
+        android:textSize="40px"
+        android:alpha="0.9"
+        android:text="CLEAR"
+        android:visibility="gone" />
+
+</RelativeLayout>
